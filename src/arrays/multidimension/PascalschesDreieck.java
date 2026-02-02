@@ -1,7 +1,5 @@
 package arrays.multidimension;
 
-import java.util.Arrays;
-
 import helper.SavitchIn;
 
 public class PascalschesDreieck {
@@ -28,9 +26,17 @@ public class PascalschesDreieck {
                 }
             }
         }
+        
+        System.out.println();
 
-        for (int[] is : drei) {
-            System.out.println(Arrays.toString(is));
+        for (int i = 0; i < drei.length; i++) {
+            for (int j = drei[drei.length -1 -i].length; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for (int el : drei[i]) {
+                System.out.printf("%d ",el);
+            }
+            System.out.println();
         }
     }
 }
