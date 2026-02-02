@@ -6,7 +6,7 @@ There is a
 [second repository](https://github.com/steeplands/intellij-java)
 maintained by
 [Moritz](https://github.com/orgs/steeplands/people/Moritz-eisl)
-containing all files for the **IntelliJ IDEA**, also if certain files are missing or incomplete, this repo likely contains an alternative/solution.  
+containing all files for the **IntelliJ IDEA**, also if certain files are missing or incomplete, his repository likely contains an alternative answer or solution to whatever problem appears.  
 
 # Attatched the original README by vscode/java
 
