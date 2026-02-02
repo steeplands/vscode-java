@@ -10,6 +10,9 @@ containing all files for the **IntelliJ IDEA**, also if certain files are missin
 
 # Attatched the original README by vscode/java
 
+![steeplands logo](https://steepangle.uk/media/banners/ferc-reactor.jpg)
+*This Image Was Added Just For Fun And I Don't Care.*
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
