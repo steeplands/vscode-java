@@ -1,6 +1,14 @@
 # vscode-java
 
-md file from the vscode project:
+This git repository should in theory contain all **2AHELS-FSST** files... *again* **should**.  
+
+There is a
+[second repository](https://github.com/steeplands/intellij-java)
+maintained by
+[Moritz](https://github.com/orgs/steeplands/people/Moritz-eisl)
+containing all files for the **IntelliJ IDEA**, also if certain files are missing or incomplete, this repo likely contains an alternative/solution.  
+
+# Attatched the original README by vscode/java
 
 ## Getting Started
 
