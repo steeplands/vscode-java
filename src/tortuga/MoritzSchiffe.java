@@ -57,6 +57,7 @@ public class MoritzSchiffe {
             System.out.print("-");
         }
     }
+
     public static void PrintUI(int remShips, int remCanons) {
         if (remShips > 0 && remCanons > 0) {
             if (remShips > 6) {
@@ -117,6 +118,7 @@ public class MoritzSchiffe {
 
         }
     }
+
     public static int findMaxSum(int x) {
         int sum = 0;
         int ref = 0;
@@ -125,7 +127,7 @@ public class MoritzSchiffe {
         }
         return ref - 1;
     }
-
+    
     public static void main(String[] args) {
         int mapsize;
         do {
