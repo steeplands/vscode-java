@@ -11,7 +11,7 @@ containing all files for the **IntelliJ IDEA**, also if certain files are missin
 # Attatched the original README by vscode/java
 
 ![steeplands logo](https://steepangle.uk/media/banners/ferc-reactor.jpg)
-*This Image Was Added Just For Fun And I Don't Care.*
+*This Image Was Added By Me Just For Fun And I Don't Care.*
 
 ## Getting Started
 
