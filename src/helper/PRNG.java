@@ -29,4 +29,3 @@ public class PRNG {
 	return prng.nextDouble();
     }
 }
-
