@@ -146,8 +146,8 @@ public class TheaterBookingCenter {
             );
 
             char[] userInString = SavitchIn.readLine().toCharArray();
-            char userIn = userInString[0];
 
+            char userIn = (userInString.length == 0) ? 'x' : userInString[0];
             userIn = Character.toLowerCase(userIn);
 
             switch (userIn) {
@@ -190,7 +190,9 @@ public class TheaterBookingCenter {
                     System.out.println(ANSI.ANSI_RED + "Exiting..." + ANSI.ANSI_RESET);
                     run = false;
                 }
-                default -> run = true;
+                default -> {
+                    System.out.println(ANSI.ANSI_RED + "Invalid input! Please try again." + ANSI.ANSI_RESET);
+                }
             }
         }
     }
