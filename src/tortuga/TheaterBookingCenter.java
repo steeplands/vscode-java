@@ -186,7 +186,11 @@ public class TheaterBookingCenter {
                 case 's' -> {
                     printTheater(saal);
                 }
-                default -> run = false;
+                case 'e' -> {
+                    System.out.println(ANSI.ANSI_RED + "Exiting..." + ANSI.ANSI_RESET);
+                    run = false;
+                }
+                default -> run = true;
             }
         }
     }
