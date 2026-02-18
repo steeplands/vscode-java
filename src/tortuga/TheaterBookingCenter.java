@@ -46,7 +46,9 @@ public class TheaterBookingCenter {
     }
 
     public static boolean bookSeat(boolean[][] theater, int row, int seat) {
-        if (row > theater.length || seat > theater[row - 1].length) {
+        if (row < 1 || seat < 1) {
+            return false;
+        } else if (row > theater.length || seat > theater[row - 1].length) {
             return false;
         } else if (theater[row - 1][seat - 1]) {
             return false;
@@ -76,7 +78,7 @@ public class TheaterBookingCenter {
         System.out.println("Theater with " + theater.length + " rows");
         System.out.println("Available seats: " + getNumberOfAllSeats(theater));
         System.out.println("    BOOKED: " + getNumberOfBookedSeats(theater));
-        System.out.println("    FREE: " + getNumberOfUnbookedSeats(theater));
+        System.out.println("    FREE:   " + getNumberOfUnbookedSeats(theater));
 
         for (int i = (theater.length - 1); i >= 0; i--) {
 
@@ -125,6 +127,7 @@ public class TheaterBookingCenter {
 
         boolean run = true;
         boolean[][] saal = createTheater(5);
+        System.out.println("Default Theater initialized with 5 rows");
         
         while (run) {
             System.out.println("\nTheaterBookingCenter:");

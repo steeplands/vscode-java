@@ -15,7 +15,6 @@ public class MoritzMindow {
     private char[][] userInterface;
     private int[][] map;
 
-
     private int width = 8;
     private int mines = 10;
     private int undiscoverd;
@@ -24,7 +23,6 @@ public class MoritzMindow {
 
     // private char mine = 'o';
     private char flag = 'F';
-
 
     public void MindowGUI(char[][] userInterface, int[][] map) {
         this.map = map;
