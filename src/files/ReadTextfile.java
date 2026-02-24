@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class ReadTextfile {
     public static void main(String[] args) {
-        String filepath = "resources/smiley.txt";
+        String filepath = "res/smiley.txt";
         try {
             FileReader reader = new FileReader(filepath);
 
