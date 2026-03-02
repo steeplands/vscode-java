@@ -21,9 +21,7 @@ public class SaveName {
                 BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
                 System.out.print("Kein Benutzer gefunden. Bitte name eingeben: ");
-                String name = SavitchIn.readLine();
-
-                bufferedWriter.write(name);
+                bufferedWriter.write( SavitchIn.readLine() );
 
                 bufferedWriter.close();
                 writer.close();
@@ -32,7 +30,6 @@ public class SaveName {
                 BufferedReader bufferedReader = new BufferedReader(reader);
 
                 String name = bufferedReader.readLine();
-
                 System.out.printf("Hallo %s!", name);
 
                 bufferedReader.close();
