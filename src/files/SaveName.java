@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 
 import helper.SavitchIn;
 
@@ -17,23 +18,19 @@ public class SaveName {
 
         try {
             if (!file.exists()) {
-                FileWriter writer = new FileWriter(PATH);
-                BufferedWriter bufferedWriter = new BufferedWriter(writer);
-
                 System.out.print("Kein Benutzer gefunden. Bitte name eingeben: ");
-                bufferedWriter.write( SavitchIn.readLine() );
 
-                bufferedWriter.close();
-                writer.close();
+                BufferedWriter bWriter = new BufferedWriter(new FileWriter(PATH));
+                bWriter.write(SavitchIn.readLine());
+
+                bWriter.close();
             } else {
-                FileReader reader = new FileReader(PATH);
-                BufferedReader bufferedReader = new BufferedReader(reader);
+                BufferedReader bReader = new BufferedReader(new FileReader(PATH));
 
-                String name = bufferedReader.readLine();
+                String name = bReader.readLine();
                 System.out.printf("Hallo %s!", name);
 
-                bufferedReader.close();
-                reader.close();
+                bReader.close();
             }
         } catch (IOException e) {
             e.printStackTrace();
