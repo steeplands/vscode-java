@@ -20,7 +20,5 @@ public class ReadTextfile {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        
     }
 }
