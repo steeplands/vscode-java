@@ -2,7 +2,7 @@ package test;
 
 import java.util.Arrays;
 
-public class bsp3 {
+public class bsp23 {
     public static void main(String[] args) {
         int[] arr = new int[9];
 

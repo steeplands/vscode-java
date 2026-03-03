@@ -1,6 +1,6 @@
 package test;
 
-public class bsp2 {
+public class bsp22 {
     public static void main(String[] args) {
 
         for (int i = 3; i <= 23; i+=5) {

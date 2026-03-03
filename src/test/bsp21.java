@@ -2,7 +2,7 @@ package test;
 
 import helper.SavitchIn;
 
-public class bsp1 {
+public class bsp21 {
     public static void main(String[] args) {
 
         int size;
