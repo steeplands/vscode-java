@@ -125,6 +125,8 @@ public class TheaterBookingCenter {
         System.out.print("Press ENTER...");
         SavitchIn.readLine();
 
+        final String FILEPATH = "res/theater.txt";
+
         boolean run = true;
         boolean[][] saal = createTheater(5);
         System.out.println("Default Theater initialized with 5 rows");
@@ -188,6 +190,13 @@ public class TheaterBookingCenter {
                 }
                 case 's' -> {
                     printTheater(saal);
+                }
+                case 'f' -> {
+                    saal = TheaterDataManager.loadTheater(FILEPATH);
+                }
+                case 'g' -> {
+                    boolean worked = TheaterDataManager.saveTheater(saal, FILEPATH);
+                    System.out.println(worked);
                 }
                 case 'e' -> {
                     System.out.println(ANSI.ANSI_RED + "Exiting..." + ANSI.ANSI_RESET);
