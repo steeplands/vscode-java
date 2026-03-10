@@ -154,7 +154,7 @@ public class TheaterBookingCenter {
                 ANSI.ANSI_YELLOW + "s" + ANSI.ANSI_RESET + "/" +
                 ANSI.ANSI_RED    + "e" + ANSI.ANSI_RESET + "/" +
                 ANSI.ANSI_CYAN   + "x" + ANSI.ANSI_RESET + "/" +
-                ANSI.ANSI_YELLOW +    "y" + ANSI.ANSI_RESET + "): "
+                ANSI.ANSI_YELLOW + "y" + ANSI.ANSI_RESET + "): "
             );
 
             char[] userInString = SavitchIn.readLine().toCharArray();
@@ -190,7 +190,7 @@ public class TheaterBookingCenter {
                     int[] newSeat = bookRandomSeat(saal);
 
                     if (newSeat != null) {
-                        System.out.println(ANSI.ANSI_GREEN + "---Seat " + newSeat[1] + " booked in row " + newSeat[0] + ".");
+                        System.out.println(ANSI.ANSI_GREEN + "---Seat " + newSeat[1] + " booked in row " + newSeat[0] + "." + ANSI.ANSI_RESET);
                     } else {
                         System.out.println(ANSI.ANSI_RED + "---No available seats found." + ANSI.ANSI_RESET);
                     }
@@ -201,14 +201,19 @@ public class TheaterBookingCenter {
                 case 'x' -> {
                     boolean[][] tmpSaal = TheaterDataManager.loadTheater(FILEPATH);
                     if (tmpSaal == null) {
-                        System.out.println("");
+                        System.out.println(ANSI.ANSI_RED + "---No savefile present." + ANSI.ANSI_RESET);
                     } else {
                         saal = TheaterDataManager.loadTheater(FILEPATH);
+                        System.out.println(ANSI.ANSI_GREEN + "---Theater loaded from: " + FILEPATH + ANSI.ANSI_RESET);
                     }
                 }
-                case 'g' -> {
+                case 'y' -> {
                     boolean worked = TheaterDataManager.saveTheater(saal, FILEPATH);
-                    System.out.println(worked);
+                    if (worked) {
+                        System.out.println(ANSI.ANSI_GREEN + "---Theater saved at: " + FILEPATH + ANSI.ANSI_RESET);
+                    } else {
+                        System.out.println(ANSI.ANSI_RED + "---Failure occured while saving." + ANSI.ANSI_RESET);
+                    }
                 }
                 case 'e' -> {
                     System.out.println(ANSI.ANSI_RED + "Exiting..." + ANSI.ANSI_RESET);
