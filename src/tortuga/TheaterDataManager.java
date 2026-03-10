@@ -29,36 +29,6 @@ public class TheaterDataManager {
     }
 
     public static boolean[][] loadTheater(String filename) {
-        /*
-        try {
-            FileReader reader = new FileReader(filename);
-            int nrOfRows = (char)reader.read();
-            reader.read(); //skip first \n
-
-            boolean[][] newTheater = TheaterBookingCenter.createTheater(nrOfRows);
-
-            for (int i = 0; i < newTheater.length; i++) {
-                for (int j = 0; j < newTheater[i].length; j++) {
-                    while (true) {
-                        char buf = (char)reader.read();
-                        if (buf == '1') {
-                            TheaterBookingCenter.bookSeat(newTheater, i+=1, j+=1);
-                        } else if (buf == '0') {
-                           continue;
-                        } else  {
-                            break;
-                        }
-                    }
-                }
-            }
-
-            reader.close();
-            return newTheater;
-        } catch (IOException e) {
-            return null;
-        }
-        */
-
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filename));
             int nrOfRows = Integer.parseInt(reader.readLine());
