@@ -130,6 +130,7 @@ public class TheaterBookingCenter {
         boolean run = true;
         boolean[][] saal = createTheater(5);
         System.out.println("Default Theater initialized with 5 rows");
+        System.out.println("Press " + ANSI.ANSI_CYAN + "X" + ANSI.ANSI_RESET + " to load the savefile.");
         
         while (run) {
             System.out.println("\nTheaterBookingCenter:");
@@ -140,14 +141,20 @@ public class TheaterBookingCenter {
             System.out.println(ANSI.ANSI_GREEN +  "R" + ANSI.ANSI_RESET + " | " + ANSI.ANSI_GREEN  + "Book Random Seat" + ANSI.ANSI_RESET);
             System.out.println(ANSI.ANSI_YELLOW + "S" + ANSI.ANSI_RESET + " | " + ANSI.ANSI_YELLOW + "Show Theater"     + ANSI.ANSI_RESET);
             System.out.println(ANSI.ANSI_RED +    "E" + ANSI.ANSI_RESET + " | " + ANSI.ANSI_RED    + "Exit"             + ANSI.ANSI_RESET);
+
+            System.out.println("\nTheaterDataManager:");
+            System.out.println(ANSI.BACK_CYAN   + "X | Load from file" + ANSI.ANSI_RESET);
+            System.out.println(ANSI.BACK_YELLOW + "Y | Save to file  " + ANSI.ANSI_RESET);
             System.out.println();
 
             System.out.print("Enter your choice (" +
                 ANSI.ANSI_PURPLE + "c" + ANSI.ANSI_RESET + "/" +
-                ANSI.ANSI_BLUE +   "b" + ANSI.ANSI_RESET + "/" +
-                ANSI.ANSI_GREEN +  "r" + ANSI.ANSI_RESET + "/" +
+                ANSI.ANSI_BLUE   + "b" + ANSI.ANSI_RESET + "/" +
+                ANSI.ANSI_GREEN  + "r" + ANSI.ANSI_RESET + "/" +
                 ANSI.ANSI_YELLOW + "s" + ANSI.ANSI_RESET + "/" +
-                ANSI.ANSI_RED +    "e" + ANSI.ANSI_RESET + "): "
+                ANSI.ANSI_RED    + "e" + ANSI.ANSI_RESET + "/" +
+                ANSI.ANSI_CYAN   + "x" + ANSI.ANSI_RESET + "/" +
+                ANSI.ANSI_YELLOW +    "y" + ANSI.ANSI_RESET + "): "
             );
 
             char[] userInString = SavitchIn.readLine().toCharArray();
@@ -191,8 +198,13 @@ public class TheaterBookingCenter {
                 case 's' -> {
                     printTheater(saal);
                 }
-                case 'f' -> {
-                    saal = TheaterDataManager.loadTheater(FILEPATH);
+                case 'x' -> {
+                    boolean[][] tmpSaal = TheaterDataManager.loadTheater(FILEPATH);
+                    if (tmpSaal == null) {
+                        System.out.println("");
+                    } else {
+                        saal = TheaterDataManager.loadTheater(FILEPATH);
+                    }
                 }
                 case 'g' -> {
                     boolean worked = TheaterDataManager.saveTheater(saal, FILEPATH);
