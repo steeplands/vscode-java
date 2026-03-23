@@ -23,14 +23,10 @@ public class WiderstandSchaltung {
         System.out.println("Test 2:");
         System.out.println("R = " + r);
 
-        Widerstand result =
+        Widerstand result = r.seriell(
+            r.parallel(
                 r.seriell(
-                        r.parallel(
-                                r.seriell(
-                                        r.parallel(r)
-                                )
-                        )
-                );
+                    r.parallel(r))));
 
         System.out.println("R + R || R + R || R || R = " + result);
     }
