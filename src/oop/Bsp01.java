@@ -1,6 +1,6 @@
 package oop;
 
-public class RechteckTester {
+public class Bsp01 {
     public static void main(String[] args) {
         Rechteck recht1 = new Rechteck();
         recht1.laenge = 5;

@@ -17,7 +17,7 @@ public class Kreis {
         return (2 * this.radius);
     }
 
-    public double getCircumference() {
+    public double getPerimeter() {
         return (2 * this.radius * Math.PI);
     }
 
@@ -30,6 +30,6 @@ public class Kreis {
         System.out.println("Radius:        " + this.radius);
         System.out.println("Diameter:      " + this.getDiameter());
         System.out.println("Area:          " + this.getArea());
-        System.out.println("Circumference: " + this.getCircumference());
+        System.out.println("Perimeter: " + this.getPerimeter());
     }
 }

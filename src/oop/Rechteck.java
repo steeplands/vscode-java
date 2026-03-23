@@ -18,7 +18,7 @@ public class Rechteck {
         return this.laenge * this.breite;
     }
 
-    public double getCircumference() {
+    public double getPerimeter() {
         return 2 * (this.laenge + this.breite);
     }
     
@@ -27,6 +27,6 @@ public class Rechteck {
         System.out.println("Länge:  " + this.laenge);
         System.out.println("Breite: " + this.breite);
         System.out.println("Fläche: " + this.getArea());
-        System.out.println("Umfang: " + this.getCircumference());
+        System.out.println("Umfang: " + this.getPerimeter());
     }
 }
