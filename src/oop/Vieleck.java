@@ -21,15 +21,14 @@ public class Vieleck {
         return (this.vertices * this.side);
     }
     
-    /*
+    
     public double getRadiusOuter() {
-        return ( this.side / ());
+        return ( this.side / (2 * Math.sin(Math.PI/this.side)));
     }
 
     public double getRadiusInner() {
-
+        return ( this.side / (2 * Math.tan(Math.PI/this.side)));
     }
-    */
 
     public double getInteriorAngle() {
         return ( ((this.vertices - 2) * 180 ) / this.vertices ); 
@@ -37,8 +36,11 @@ public class Vieleck {
 
     public void printState() {
         System.out.println("*****************************");
-        System.out.println("Edges:     " + this.vertices);
-        System.out.println("Area:      " + this.getArea());
-        System.out.println("Perimeter: " + this.getPerimeter());
+        System.out.println("Edges:       " + this.vertices);
+        System.out.println("Area:        " + this.getArea());
+        System.out.println("Perimeter:   " + this.getPerimeter());
+        System.out.println("Innenradius: " + this.getRadiusInner());
+        System.out.println("Außenradius: " + this.getRadiusOuter());
+        System.out.println("Innenwinkel: " + this.getInteriorAngle());
     }
 }
