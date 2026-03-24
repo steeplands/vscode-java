@@ -8,6 +8,7 @@ public class Vieleck {
         this.vertices = 3;
         this.side = 1;
     }
+    
     public Vieleck(int vertices, double side) {
         this.vertices = vertices;
         this.side = side;
@@ -20,7 +21,6 @@ public class Vieleck {
     public double getPerimeter() {
         return (this.vertices * this.side);
     }
-    
     
     public double getRadiusOuter() {
         return ( this.side / (2 * Math.sin(Math.PI/this.side)));
@@ -37,6 +37,7 @@ public class Vieleck {
     public void printState() {
         System.out.println("*****************************");
         System.out.println("Edges:       " + this.vertices);
+        System.out.println("Side:        " + this.side);
         System.out.println("Area:        " + this.getArea());
         System.out.println("Perimeter:   " + this.getPerimeter());
         System.out.println("Innenradius: " + this.getRadiusInner());
