@@ -3,9 +3,11 @@ package oop;
 public class Produkt {
     static double steuersatz = 0.2;
     double netto;
+    String name;
 
-    public Produkt (double nettoPreis) {
+    public Produkt (String name, double nettoPreis) {
         this.netto = nettoPreis;
+        this.name = name;
     }
 
     public static double getMwst(double nettoPreis) {

@@ -4,9 +4,10 @@ public class ProduktTester {
     public static void main(String[] args) {
         Produkt[] produkte = new Produkt[3];
         double[] preise = {120, 100, 80};
+        String[] namen = {"Äpfel", "Birnen", "Tomaten"};
 
         for (int i = 0; i < produkte.length; i++) {
-            produkte[i] = new Produkt(preise[i]);
+            produkte[i] = new Produkt(namen[i], preise[i]);
         }
 
         for (int i = 0; i < produkte.length; i++) {
