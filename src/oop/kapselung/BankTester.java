@@ -35,5 +35,8 @@ public class BankTester {
 
         System.out.printf("ID: %d, Besitzer: %s, Kontostand: %s\n", temp1.getId(), temp1.getOwner(), temp1.getBalance());
         System.out.printf("ID: %d, Besitzer: %s, Kontostand: %s\n", temp2.getId(), temp2.getOwner(), temp2.getBalance());
+
+        temp1.getAccountInfo();
+        konto2.getAccountInfo();
     }
 }

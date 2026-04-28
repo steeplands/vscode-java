@@ -5,13 +5,8 @@ public class Bankkonto {
     private String owner;
     private double balance;
     
-    private static int idInkre = 1;
-    private int id = idInkre++;
-
-    public Bankkonto() {
-        this.overdraft = 0;
-        this.balance = 0;
-    }
+    private static int numOfAccounts;
+    private int id = ++numOfAccounts;
     
     public Bankkonto(String owner) {
         this.owner = owner;
@@ -49,5 +44,12 @@ public class Bankkonto {
         }
         this.balance -= Math.abs(ammount);
         return true;
+    }
+
+    public void getAccountInfo() {
+        System.out.println("\n===== Account Information =====");
+        System.out.println("ID:        " + this.id);
+        System.out.println("Owner:     " + this.owner);
+        System.out.println("Balance:   EUR " + this.balance);
     }
 }
