@@ -26,8 +26,20 @@ public class Bankkonto {
         this.owner = owner;
     }
 
+    public double getOverdraft() {
+        return overdraft;
+    }
+
+    public void setOverdraft(double overdraft) {
+        this.overdraft = overdraft;
+    }
+
     public double getBalance() {
         return this.balance;
+    }
+
+    public double getAvailable() {
+        return this.balance + this.overdraft;
     }
 
     public boolean deposit(double ammount) {
@@ -39,17 +51,21 @@ public class Bankkonto {
     }
 
     public boolean withdraw(double ammount) {
-        if(this.balance - Math.abs(ammount) >= this.overdraft) {
+        if (ammount <= 0) {
             return false;
+        } else if (ammount > this.getAvailable()) {
+            return false;
+        } else {
+            this.balance -= ammount;
+            return true;
         }
-        this.balance -= Math.abs(ammount);
-        return true;
     }
 
     public void getAccountInfo() {
         System.out.println("\n===== Account Information =====");
-        System.out.println("ID:        " + this.id);
-        System.out.println("Owner:     " + this.owner);
-        System.out.println("Balance:   EUR " + this.balance);
+        System.out.println("AccountID:   " + this.id);
+        System.out.println("Owner:       " + this.owner);
+        System.out.println("Balance:     EUR " + this.balance);
+        System.out.println("Available:   EUR " + this.getAvailable());
     }
 }

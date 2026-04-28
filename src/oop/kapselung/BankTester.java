@@ -38,5 +38,10 @@ public class BankTester {
 
         temp1.getAccountInfo();
         konto2.getAccountInfo();
+        System.out.println();
+
+        konto1.setOverdraft(100);
+        konto1.withdraw(100);
+        System.out.printf("ID: %d, Besitzer: %s, Kontostand: %s\n", konto1.getId(), konto1.getOwner(), konto1.getBalance());
     }
 }
