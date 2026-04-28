@@ -4,16 +4,23 @@ public class Bankkonto {
     private double overdraft;
     private String owner;
     private double balance;
+    
+    private static int idInkre = 1;
+    private int id = idInkre++;
 
     public Bankkonto() {
         this.overdraft = 0;
         this.balance = 0;
     }
     
-    public Bankkonto(String besitzer) {
-        this.owner = besitzer;
+    public Bankkonto(String owner) {
+        this.owner = owner;
         this.overdraft = 0;
         this.balance = 0;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getOwner() {
