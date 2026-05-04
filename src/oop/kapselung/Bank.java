@@ -20,8 +20,8 @@ public class Bank {
     }
 
     public boolean transaction(int senderID, int recieverID, double ammount) {
-        Bankkonto sender = this.getAccountById(senderID);
-        Bankkonto reciever = this.getAccountById(recieverID);
+        Bankkonto sender = this.getAccount(senderID);
+        Bankkonto reciever = this.getAccount(recieverID);
 
         if(sender == null || reciever == null) {
             return false;
@@ -44,9 +44,9 @@ public class Bank {
         return null;
     }
 
-    public Bankkonto getAccountById(int id) {
+    public Bankkonto getAccount(int id) {
         for (Bankkonto bankkonto : this.konten) {
-            if (bankkonto.getId() == id) {
+            if (bankkonto != null && bankkonto.getId() == id) {
                 return bankkonto;
             }
         }
