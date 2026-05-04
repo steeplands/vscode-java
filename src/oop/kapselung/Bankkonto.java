@@ -15,7 +15,7 @@ public class Bankkonto {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public String getOwner() {
@@ -30,8 +30,13 @@ public class Bankkonto {
         return overdraft;
     }
 
-    public void setOverdraft(double overdraft) {
-        this.overdraft = overdraft;
+    public boolean setOverdraft(double overdraft) {
+        if (overdraft < 0) {
+            return false;
+        } else {
+            this.overdraft = overdraft;
+            return true;
+        }
     }
 
     public double getBalance() {

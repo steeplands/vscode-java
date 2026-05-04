@@ -17,11 +17,36 @@ public class Bank {
         this.konten[this.kontoInkre] = new Bankkonto(owner);
         this.kontoInkre++;
         return true;
-    } 
+    }
+
+    public boolean transaction(int senderID, int recieverID, double ammount) {
+        Bankkonto sender = this.getAccountById(senderID);
+        Bankkonto reciever = this.getAccountById(recieverID);
+
+        if(sender == null || reciever == null) {
+            return false;
+        }
+
+        if (sender.withdraw(ammount) == true) {
+            reciever.deposit(ammount);
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public Bankkonto getAccount(String owner) {
         for (Bankkonto bankkonto : this.konten) {
             if (bankkonto.getOwner().equals(owner)) {
+                return bankkonto;
+            }
+        }
+        return null;
+    }
+
+    public Bankkonto getAccountById(int id) {
+        for (Bankkonto bankkonto : this.konten) {
+            if (bankkonto.getId() == id) {
                 return bankkonto;
             }
         }

@@ -2,23 +2,21 @@ package oop.kapselung;
 
 public class BankTester {
     public static void main(String[] args) {
-        System.out.println("=====Konten=====");
+        System.out.println("\n=====Bank=====");
 
-        Bankkonto konto1 = new Bankkonto("Armin");
-        Bankkonto konto2 = new Bankkonto("Doris");
+        Bank bank = new Bank(100);
+
+        bank.newAccount("Armin");
+        bank.newAccount("Doris");
+
+        Bankkonto konto1 = bank.getAccount("Armin");
+        Bankkonto konto2 = bank.getAccount("Doris");
 
         konto1.deposit(50);
         konto2.deposit(106.75);
 
         System.out.printf("ID: %d, Besitzer: %s, Kontostand: %s\n", konto1.getId(), konto1.getOwner(), konto1.getBalance());
         System.out.printf("ID: %d, Besitzer: %s, Kontostand: %s\n", konto2.getId(), konto2.getOwner(), konto2.getBalance());
-
-        konto1.withdraw(12.45);
-        System.out.println("Konto1: " + konto1.getBalance());
-
-        System.out.println("\n=====Bank=====");
-        //Bank
-        Bank bank = new Bank(100);
 
         bank.newAccount("Ulf");
         bank.newAccount("Ema");
@@ -43,5 +41,15 @@ public class BankTester {
         konto1.setOverdraft(100);
         konto1.withdraw(100);
         System.out.printf("ID: %d, Besitzer: %s, Kontostand: %s\n", konto1.getId(), konto1.getOwner(), konto1.getBalance());
+
+        konto1.getAccountInfo();
+
+        System.out.println("\n----------\n");
+
+        System.out.println("20EUR Doris -> Armin");
+        bank.transaction(2, 1, 20);
+
+        System.out.printf("ID: %d, Besitzer: %s, Kontostand: %s\n", konto1.getId(), konto1.getOwner(), konto1.getBalance());
+        System.out.printf("ID: %d, Besitzer: %s, Kontostand: %s\n", konto2.getId(), konto2.getOwner(), konto2.getBalance());
     }
 }
