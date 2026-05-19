@@ -10,8 +10,8 @@ public class TwitterWallTester {
         System.out.println("Default max tweet length: " + Tweet.getMaxLength());
 
         // Create tweets
-        Tweet t1 = new Tweet("Florian", "Hello World!");
-        Tweet t2 = new Tweet("Anna", "Java is fun.");
+        Tweet t1 = new Tweet("John", "Hello World!");
+        Tweet t2 = new Tweet("Marie", "Java is fun.");
         Tweet t3 = new Tweet("Max", "This is a test tweet.");
 
         // Print tweets
