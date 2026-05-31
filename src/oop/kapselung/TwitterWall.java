@@ -39,7 +39,16 @@ public class TwitterWall {
     }
 
     public Tweet[] getTweets() {
-        return this.tweets;
+        Tweet[] ausgabe = new Tweet[this.getNrOfTweetsInWall()];
+        int idx = this.tweetInkre - 1;
+        for (int i = 0; i < ausgabe.length; i++) {
+            if (idx < 0) {
+                idx = this.getWallSize() - 1;
+            }
+            ausgabe[i] = this.tweets[idx];
+            idx--;
+        }
+        return ausgabe;
     }
 
     public void clearWall() {
