@@ -1,5 +1,5 @@
 package test;
-public class bsp4 {
+public class bsp34 {
     public static void main(String[] args) {
         int[] array = {21, 22, 22, 23, 23, 21, 23, 21, 19, 21};
         double sum = 0;
