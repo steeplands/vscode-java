@@ -28,5 +28,17 @@ public class Zoo {  // Tier Tester
         Vierbeiner katze3 = new Katze("Garfield");
         katze3.beschreibung();
         katze3.rennen();
+
+        Amsel vogel1 = new Amsel("Amsl");
+        vogel1.beschreibung();
+        vogel1.fliegen();
+
+        Adler vogel2 = new Adler("Adla");
+        vogel2.beschreibung();
+        vogel2.fliegen();
+
+        VogelStrauss vogel3 = new VogelStrauss("Voglsta");
+        vogel3.beschreibung();
+        vogel3.fliegen();
     }
 }
