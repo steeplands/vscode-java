@@ -87,16 +87,18 @@ public class Matrix {
 
     // ==== PRINT ====
     public void print() {
-        System.out.println("**********");
+        System.out.println("*".repeat(25));
         System.out.println("Matrix");
-        System.out.println("Dimension: " + rows + "x" + columns);
+        System.out.println("-".repeat(25));
+        System.out.println("Dimension: " + this.getNrOfRows() + 'x' + this.getNrOfColumns());
+        System.out.println("-".repeat(25));
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 System.out.print((int) data[i][j] + "\t");
             }
             System.out.println();
         }
-        System.out.println("**********");
+        System.out.println("*".repeat(25));
     }
 
     // ==== FUNCTIONS ====
