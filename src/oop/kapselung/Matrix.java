@@ -94,14 +94,14 @@ public class Matrix {
         System.out.println("-".repeat(25));
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                System.out.print((int) data[i][j] + "\t");
+                System.out.print( data[i][j] + "\t");   //tabstopp für Lesbarkeit
             }
             System.out.println();
         }
         System.out.println("*".repeat(25));
     }
 
-    // ==== FUNCTIONS ====
+    // ==== OPERATIONS ====
     public boolean equals(Matrix other) {
         if (other == null) return false;
         if (this.rows != other.rows || this.columns != other.columns) return false;
