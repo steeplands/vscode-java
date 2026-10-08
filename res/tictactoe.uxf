@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>121</x>
+      <y>22</y>
+      <w>231</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>TicTacToe
+--
++ TicTacToe()
+--
+- board: Board
+- player1: Player
+- player2: Player
+- currentPlayer: Player
+--
++ play(): void
+- init(): void
+- setStone(): void
+- hasPlayerWon(): boolean
+- isDraw(): boolean
+- changePlayer(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>385</y>
+      <w>418</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>Board
+--
++ Board()
+--
+- fields: Field[][]
+--
++ isFull(): boolean
++ print(): void
++ setStone(rowIdx: int, colIdx: int, player: Player): boolean
++ getRow(rowIdx: int): Field[]
++ getCol(colIdx: int): Field[]
++ getMain(): Field[]
++ getSecondary(): Field[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>737</y>
+      <w>253</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>Field
+--
++ Field()
+--
+- occupiedBy: Player
+--
++ isUsed(): boolean
++ getOccupiedBy(): Player
++ occupies(player: Player): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>99</x>
+      <y>385</y>
+      <w>264</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Player
+--
++ Player(name: String, sign: char)
+--
+- name: String
+- sign: char
+--
++ getName(): String
++ getSign(): char</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>341</x>
+      <y>143</y>
+      <w>352</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;10.0;300.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>616</y>
+      <w>33</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>253</y>
+      <w>33</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>528</y>
+      <w>352</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0;300.0;280.0</additional_attributes>
+  </element>
+</diagram>
