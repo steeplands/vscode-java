@@ -32,7 +32,7 @@ public class Feld {
         if (this.spieler == null) {
             return ' ';
         } else {
-            return this.getSymbol();
+            return this.spieler.getSymbol();
         }
     }
 
