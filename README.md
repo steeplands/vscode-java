@@ -1,12 +1,12 @@
 # vscode-java
 
-This git repository should in theory contain all **2AHELS-FSST** files... *again* **should**.  
+This git repository should, in theory, contain all **BPROM-JAVA-FSST** files... *again* **should**.  
 
 There is a
 [second repository](https://github.com/steeplands/intellij-java)
 maintained by
 [Moritz](https://github.com/orgs/steeplands/people/Moritz-eisl)
-containing all files for the **IntelliJ IDEA**, also if certain files are missing or incomplete, his repository likely contains an alternative answer or solution to whatever problem appears.  
+containing all files for the **IntelliJ IDEA**, also if certain files are missing or incomplete, his repository likely contains an alternative answer or solution to whatever problem may appear.  
 
 # Attatched the original README by vscode/java
 
