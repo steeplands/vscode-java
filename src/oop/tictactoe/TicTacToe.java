@@ -1,5 +1,7 @@
 package oop.tictactoe;
 
+import java.util.Arrays;
+
 public class TicTacToe {
     public static void main(String[] args) {
         Feld testfeld = new Feld();
@@ -14,6 +16,8 @@ public class TicTacToe {
         System.out.println(testfeld.toString());
         System.out.println("<" + testfeld.getSymbol() + ">");
 
+
+        // Brett
         Spielbrett brett = new Spielbrett();
 
         brett.brettAusgeben();
@@ -25,5 +29,17 @@ public class TicTacToe {
 
         brett.brettAusgeben();
         System.out.println();
+
+        // Zeile
+        System.out.println(Arrays.toString(brett.getZeile(0)));
+        System.out.println(Arrays.toString(brett.getZeile(-1)));
+
+        // Spalte
+        System.out.println(Arrays.toString(brett.getSpalte(1)));
+        System.out.println(Arrays.toString(brett.getSpalte(-1)));
+
+        // Diag
+        System.out.println(Arrays.toString(brett.getDiagonaleHaupt()));
+        System.out.println(Arrays.toString(brett.getDiagonaleNeben()));
     }
 }
