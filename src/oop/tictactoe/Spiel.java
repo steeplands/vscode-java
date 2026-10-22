@@ -76,6 +76,8 @@ public class Spiel {
     }
 
     public static void main(String[] args) {
+        // GUI: https://gitlab.com/htl-sbg/swe-uebungsbeispiele/-/wikis/Java-Swing/TicTacToe-mit-Java-Swing-GUI
+        
         Spieler spieler1;
         Spieler spieler2;
         Spiel spiel;
