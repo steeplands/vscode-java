@@ -27,47 +27,28 @@ public class Spiel {
         return this.spielbrett.steinSetzen(row, col, this.aktuellerSpieler);
     }
 
+    private boolean occupiedBySelectedPlayer(Feld[] felder) {
+        for (Feld feld : felder) {
+            if (feld.getSpieler() != this.aktuellerSpieler) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public boolean gewonnen() {
-        boolean win;
 
         // Zeilen
         for (int i = 0; i < this.spielbrett.getZeile(0).length; i++) {
-            win = true;        
-            for (Feld feld : this.spielbrett.getZeile(i)) {
-                if (feld.getSpieler() != this.aktuellerSpieler) {
-                    win = false;
-                }
-            }
-            if (win) return true;
+            if (occupiedBySelectedPlayer(this.spielbrett.getZeile(i))) return true;
         }
-
         // Spalten
         for (int i = 0; i < this.spielbrett.getSpalte(0).length; i++) {
-            win = true;            
-            for (Feld feld : this.spielbrett.getSpalte(i)) {
-                if (feld.getSpieler() != this.aktuellerSpieler) {
-                    win = false;
-                }
-            }
-            if (win) return true;
+            if (occupiedBySelectedPlayer(this.spielbrett.getSpalte(i))) return true;
         }
-
         // Diagonalen
-        win = true;
-        for (Feld feld : this.spielbrett.getDiagonaleHaupt()) {
-            if (feld.getSpieler() != this.aktuellerSpieler) {
-                win = false;
-            }
-        }
-        if (win) return true;
-
-        win = true;
-        for (Feld feld : this.spielbrett.getDiagonaleNeben()) {
-            if (feld.getSpieler() != this.aktuellerSpieler) {
-                win = false;
-            }
-        }
-        return win;
+        if (occupiedBySelectedPlayer(this.spielbrett.getDiagonaleHaupt())) return true;
+        return occupiedBySelectedPlayer(this.spielbrett.getDiagonaleNeben());
     }
 
     public boolean unentschieden() {
