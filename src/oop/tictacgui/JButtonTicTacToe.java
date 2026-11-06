@@ -31,7 +31,7 @@ public class JButtonTicTacToe extends JButton {
     private ImageIcon createImageIcon(String filename) {
         ImageIcon imageIcon = new ImageIcon(filename);
         Image image = imageIcon.getImage();
-        Image newImg = image.getScaledInstance(TicTacToeGUIReference.BUTTON_SIZE, TicTacToeGUIReference.BUTTON_SIZE, java.awt.Image.SCALE_SMOOTH);
+        Image newImg = image.getScaledInstance(this.getPreferredSize().width, this.getPreferredSize().height, java.awt.Image.SCALE_SMOOTH);
         return new ImageIcon(newImg);
     }
 
