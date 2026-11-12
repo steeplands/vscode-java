@@ -3,7 +3,7 @@ package oop.vererbung;
 public class ZylinderKreis extends ZylinderAllgemein {
     private final double RADIUS;
 
-    public ZylinderKreis(double radius, double hoehe) {
+    public ZylinderKreis(double hoehe, double radius) {
         super(hoehe);
         this.RADIUS = radius;
     }
