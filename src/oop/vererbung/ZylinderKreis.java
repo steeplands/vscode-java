@@ -1,18 +1,18 @@
 package oop.vererbung;
 
 public class ZylinderKreis extends ZylinderAllgemein {
-    private double radius;
+    private final double RADIUS;
 
     public ZylinderKreis(double radius, double hoehe) {
         super(hoehe);
-        this.radius = radius;
+        this.RADIUS = radius;
     }
 
     public double getGrundflaeche() {
-        return (Math.pow(this.radius, 2) * Math.PI);
+        return (Math.pow(this.RADIUS, 2) * Math.PI);
     }
 
     public double getUmfangGrundflaeche() {
-        return (this.radius * 2 * Math.PI);
+        return (this.RADIUS * 2 * Math.PI);
     }
 }

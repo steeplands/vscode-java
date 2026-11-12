@@ -1,18 +1,18 @@
 package oop.vererbung;
 
 public class ZylinderQuadratisch extends ZylinderAllgemein {
-    private double seite;
+    private final double SEITE;
 
     public ZylinderQuadratisch(double hoehe, double seite) {
         super(hoehe);
-        this.seite = seite;
+        this.SEITE = seite;
     }
 
     public double getGrundflaeche() {
-        return Math.pow(this.seite, 2);
+        return Math.pow(this.SEITE, 2);
     }
 
     public double getUmfangGrundflaeche() {
-        return this.seite * 4;
+        return this.SEITE * 4;
     }
 }
