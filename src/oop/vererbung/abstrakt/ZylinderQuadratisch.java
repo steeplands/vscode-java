@@ -1,4 +1,4 @@
-package oop.vererbung;
+package oop.vererbung.abstrakt;
 
 public class ZylinderQuadratisch extends ZylinderAllgemein {
     private final double SEITE;
