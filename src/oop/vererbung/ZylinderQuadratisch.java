@@ -8,10 +8,12 @@ public class ZylinderQuadratisch extends ZylinderAllgemein {
         this.SEITE = seite;
     }
 
+    @Override
     public double getGrundflaeche() {
         return Math.pow(this.SEITE, 2);
     }
 
+    @Override
     public double getUmfangGrundflaeche() {
         return this.SEITE * 4;
     }

@@ -8,10 +8,12 @@ public class ZylinderKreis extends ZylinderAllgemein {
         this.RADIUS = radius;
     }
 
+    @Override
     public double getGrundflaeche() {
         return (Math.pow(this.RADIUS, 2) * Math.PI);
     }
 
+    @Override
     public double getUmfangGrundflaeche() {
         return (this.RADIUS * 2 * Math.PI);
     }
