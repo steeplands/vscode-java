@@ -16,7 +16,7 @@ public class Duck extends Animal implements IFlys, ISwimms {
     }
 
     @Override 
-    public void canSwim() {
-
+    public boolean canSwim() {
+        return true;
     }
 }

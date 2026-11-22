@@ -48,4 +48,16 @@ public class Zoo {
             }
         }
     }
+
+    public void moveAnimal(Animal animal) {
+        if (animal instanceof IFlys && animal instanceof ISwimms) {
+            System.out.println(animal.getName() + " - Fly: " + ((IFlys)animal).canFly() + " - Swim: " + ((ISwimms)animal).canSwim());
+        } else if (animal instanceof IFlys) {
+            System.out.println(animal.getName() + " - Fly: " + ((IFlys)animal).canFly());
+        } else if (animal instanceof ISwimms) {
+            System.out.println(animal.getName() + " - Swim: " + ((ISwimms)animal).canSwim());
+        } else {
+            System.out.println(animal.getName() + " Walks");
+        }
+    }
 }

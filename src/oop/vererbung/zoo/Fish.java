@@ -11,7 +11,7 @@ public class Fish extends Animal implements ISwimms {
     }
 
     @Override 
-    public void canSwim() {
-
+    public boolean canSwim() {
+        return true;
     }
 }

@@ -25,5 +25,11 @@ public class Main {
 
         System.out.println("\nFlying:");
         zoo.printAllFlying();
+
+        System.out.println("\nMove:");
+        zoo.moveAnimal(bird);
+        zoo.moveAnimal(dog);
+        zoo.moveAnimal(duck);
+        zoo.moveAnimal(fish);
     }
 }
