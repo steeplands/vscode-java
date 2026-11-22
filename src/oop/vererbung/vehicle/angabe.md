@@ -7,6 +7,8 @@ Ich habe mir dein Skriptum **FSST – Softwareentwicklung mit Java** angesehen. 
 
 Die folgenden drei Übungen orientieren sich am Aufbau und Schwierigkeitsgrad der Aufgabenstellungen im Skriptum. Sie sind als eigenständige Programmieraufgaben formuliert und werden schrittweise anspruchsvoller.
 
+
+
 # **Übungsbeispiel 1 – Fahrzeugverwaltung**
 
 
