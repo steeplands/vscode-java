@@ -1,6 +1,6 @@
 package oop.vererbung;
 
-public class Zoo {  // Tier Tester
+public class Tierpark {  // Tier Tester
     public static void main(String[] args) {
         Tier tiger = new Tier("Tiger", "Felix");
         tiger.beschreibung();
