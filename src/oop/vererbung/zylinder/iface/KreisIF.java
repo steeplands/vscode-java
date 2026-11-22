@@ -1,4 +1,4 @@
-package oop.vererbung.iface;
+package oop.vererbung.zylinder.iface;
 
 public class KreisIF implements IGeometrischeFlaeche{
     private final double radius;

@@ -1,4 +1,4 @@
-package oop.vererbung.iface;
+package oop.vererbung.zylinder.iface;
 
 public class ZylinderAllgemeinIF {
     private final IGeometrischeFlaeche grundflaeche;

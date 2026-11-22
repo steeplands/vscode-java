@@ -1,4 +1,4 @@
-package oop.vererbung.iface;
+package oop.vererbung.zylinder.iface;
 
 public class Tester {
     public static void main(String[] args) {

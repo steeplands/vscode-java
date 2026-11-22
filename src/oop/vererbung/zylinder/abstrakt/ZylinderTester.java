@@ -1,4 +1,4 @@
-package oop.vererbung.abstrakt;
+package oop.vererbung.zylinder.abstrakt;
 
 public class ZylinderTester {
     public static void main(String[] args) {

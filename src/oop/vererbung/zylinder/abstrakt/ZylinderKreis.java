@@ -1,4 +1,4 @@
-package oop.vererbung.abstrakt;
+package oop.vererbung.zylinder.abstrakt;
 
 public class ZylinderKreis extends ZylinderAllgemein {
     private final double RADIUS;

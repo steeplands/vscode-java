@@ -1,4 +1,4 @@
-package oop.vererbung.abstrakt;
+package oop.vererbung.zylinder.abstrakt;
 
 public abstract class ZylinderAllgemein {
     protected final double HOEHE;
