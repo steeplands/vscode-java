@@ -5,12 +5,16 @@ public class Currency {
     private double toEUR;
 
     public Currency(String symbol, double toEUR) {
-        this.toEUR = toEUR;
-        this.symbol = symbol;
+        this.toEUR = Math.abs(toEUR);
+        this.symbol = symbol.toUpperCase();
     }
 
     public String getSymbol() {
         return this.symbol;
+    }
+
+    public double getToEUR() {
+        return this.toEUR;
     }
 
     public double convertToEUR(double ammount) {

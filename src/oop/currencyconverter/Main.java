@@ -4,39 +4,37 @@ import helper.SavitchIn;
 
 public class Main {
     public static void main(String[] args) {
-        Currency usd = new Currency("USD", 1.1);
+        CurrencyConverter cc = new CurrencyConverter(10);
+
+        Currency eur = new Currency("EUR", 1);
         Currency jpy = new Currency("JPY", 174.8);
 
-        Currency[] currencies = new Currency[10];
-        currencies[0] = new Currency("EUR", 1);
-        currencies[1] = new Currency("USD", 1.1);
-        currencies[2] = new Currency("JPY", 174.8);
-        currencies[3] = new Currency("GBP", 0.84);
-
-        CurrencyConverter cc = new CurrencyConverter(10);
+        cc.addCurrency(eur);
+        cc.addCurrency(jpy);
+        cc.addCurrency(new Currency("GBP",0.84));
+        cc.addCurrency("USD", 1.1);
 
         System.out.println("=== Currency Converter ===");
         System.out.println("Supported currencies: EUR/USD/JPY/GBP");
 
-        String userFrom;
-        String userTo;
+        Currency from;
+        Currency to;
+        double ammount;
 
-        do {
+        while (true) {
             System.out.print("Convert FROM: ");
-            userFrom = SavitchIn.readLine();
+            from = cc.getCurrencyFromSymbol(SavitchIn.readLine());
             System.out.print("TO: ");
-            userTo = SavitchIn.readLine();
-        } while (cc.isCurrencyWrong(userTo) && cc.isCurrencyWrong(userFrom));
+            to = cc.getCurrencyFromSymbol(SavitchIn.readLine());
 
-        System.out.println();
+            if (to != null && from != null) break;
+        }
 
+        System.out.println("Ammount: ");
+        ammount = SavitchIn.readLineDouble();
 
-        double ammount1usd = 255.5;
+        double result = cc.convert(from, to, ammount);
 
-        //double ammount1InJpy = jpy.convertFromEUR(usd.convertToEUR(ammount1usd));
-
-        double ammount1InJpy = cc.convert(usd, jpy, ammount1usd);
-
-        System.out.println(ammount1InJpy);
+        System.out.printf("%f %s --> %f %d", ammount, from.getSymbol(), result, to.getSymbol());
     }
 }
