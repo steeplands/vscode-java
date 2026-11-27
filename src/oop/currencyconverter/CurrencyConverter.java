@@ -1,17 +1,38 @@
 package oop.currencyconverter;
 
 public class CurrencyConverter {
-    
+    private Currency[] currencies;
+    private static int nextIndex;
 
-    public static void main(String[] args) {
-        Currency usd = new Currency("USD", 1.1);
-        Currency jpy = new Currency("YPN", 174.8);
-        //Currency gbp = new Currency("USD", 0.84);
+    public CurrencyConverter(int maxCurrencies) {
+        this.currencies = new Currency[maxCurrencies];
+    }
 
-        double ammount1usd = 255.5;
+    public boolean addCurrency(String symbol, double toEUR) {
+        if (CurrencyConverter.nextIndex == this.currencies.length) return false;
 
-        double ammount1InJpy = jpy.convertFromEUR(usd.convertToEUR(ammount1usd));
+        toEUR = Math.abs(toEUR);
+        symbol = symbol.toUpperCase();
 
-        System.out.println(ammount1InJpy);
+        this.currencies[CurrencyConverter.nextIndex] = new Currency(symbol, toEUR);
+        return true;
+    }
+
+    public double convert(Currency from, Currency to, double ammount) {
+        return to.convertFromEUR(from.convertToEUR(ammount));
+    }
+
+    public boolean isCurrencyValid(String currencySymbol) {
+        currencySymbol = currencySymbol.toUpperCase();
+
+        for (Currency currency : currencies) {
+            if (currency.getSymbol() == currencySymbol) return true;
+        }
+
+        return false;
+    }
+
+    public boolean isCurrencyWrong(String currencySymbol) {
+        return !isCurrencyValid(currencySymbol);
     }
 }
