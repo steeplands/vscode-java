@@ -14,10 +14,10 @@ public class Currency {
     }
 
     public double convertToEUR(double ammount) {
-        return this.toEUR * ammount;
+        return ammount / this.toEUR;
     }
 
     public double convertFromEUR(double ammount) {
-        return ammount/this.toEUR;
+        return ammount * this.toEUR;
     }
 }
